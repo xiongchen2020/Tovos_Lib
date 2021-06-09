@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hub_login"
+    style="@style/hub_ll_style">
+
+    <LinearLayout
+        android:id="@+id/ll_hub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/hub_rl_style">
+
+            <EditText
+                android:id="@+id/et_user"
+                style="@style/hub_et_style"/>
+
+            <TextView
+                style="@style/hub_tv_left_style"
+                android:text="用户名:"
+                />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/hub_rl_style">
+
+            <EditText
+                android:id="@+id/et_pass"
+                style="@style/hub_et_style"></EditText>
+
+            <TextView
+                style="@style/hub_tv_left_style"
+                android:text="密码:"
+               >
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rtk_sure"
+            style="@style/hub_rl_style"
+            android:layout_marginBottom="@dimen/set_item_space_small"
+           >
+
+            <TextView
+                android:id="@+id/tv_login"
+                style="@style/hub_tv_style"
+                android:layout_centerInParent="true"
+                android:text="登录"
+               />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_hub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+
+</LinearLayout>

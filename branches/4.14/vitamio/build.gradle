@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+dependencies {
+
+
+}
+
+
+
+android {
+
+    uploadArchives {
+        repositories.mavenDeployer {
+            //打包的路径
+            repository(url: maven_url+'tovos-hosted/') {
+                //你Nexus的账户密码
+                authentication(userName: 'admin', password: '123456')
+            }
+            pom.project {
+                version vitamioVersion //版本号，多次打包不能一致
+                artifactId 'vaitmio' //识别Id，与项目名称一致即可
+                groupId 'com.livestream' //组号，类似包名
+                packaging 'aar' //打包格式
+                description 'livestream vaitmio' //描述
+            }
+        }
+    }
+    compileSdkVersion csdkVersion
+    buildToolsVersion buildToolsVersion
+
+    defaultConfig {
+        flavorDimensions "default"
+        minSdkVersion msdkVersion
+        targetSdkVersion tsdkVersion
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            jniLibs.srcDirs = ['libs']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+
+    }
+
+}
+
+//展开libs文件夹里面的文件，aar文件依赖必须的配置
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+/* buildscript这是gradle环境本身所依赖的库，一般是链接
+maven和git,Jcenter的仓库加载插件的，但是这里必须本地加载，
+下面是把所有的lib文件中的文件加载进去*/
+buildscript {
+    dependencies {
+        classpath fileTree(include: ['*.jar'], dir: 'lib')
+    }
+}

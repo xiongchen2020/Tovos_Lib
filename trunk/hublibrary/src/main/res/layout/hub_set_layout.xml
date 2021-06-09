@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hub_set"
+    style="@style/hub_ll_style">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:id="@+id/login_user"
+                style="@style/hub_rl_style">
+
+                <TextView
+                    style="@style/hub_tv_left_style"
+                    android:text="登录用户："
+                   />
+
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    style="@style/hub_tv_right_style"
+
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/flight_rl"
+                style="@style/hub_rl_style"
+                android:visibility="gone"
+              >
+
+                <ImageView
+                    android:id="@+id/iv_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12.3dp"
+                    android:src="@drawable/selector_zk_sq"/>
+
+
+
+                <TextView
+                   style="@style/hub_tv_left_style"
+                    android:text="团队列表"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/team_list"
+                android:layout_width="@dimen/set_item_width"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/bind_rl"
+                style="@style/hub_rl_style"
+                android:visibility="gone"
+               >
+
+                <TextView
+                    style="@style/hub_tv_style"
+                    android:text="飞机绑定团队："
+                   />
+
+
+                <TextView
+                    android:id="@+id/tv_bind_team"
+                    style="@style/hub_tv_right_style"
+
+                 />
+
+
+            </RelativeLayout>
+
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="@dimen/set_item_width"-->
+<!--                android:layout_height="@dimen/set_item_height"-->
+<!--                android:layout_marginTop="@dimen/set_item_space_small"-->
+<!--                android:background="@drawable/selected_set_item_shape">-->
+
+
+<!--                <Button-->
+<!--                    android:id="@+id/button_publishurl"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:text="获取"-->
+<!--                    android:textSize="@dimen/fxjl_text">-->
+
+<!--                </Button>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginLeft="11dp"-->
+<!--                    android:text="获取直播地址："-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textSize="@dimen/fxjl_text">-->
+
+<!--                </TextView>-->
+
+<!--            </RelativeLayout>-->
+            <RelativeLayout
+                style="@style/hub_rl_style">
+
+                <TextView
+                    android:id="@+id/tv_video_status"
+                    style="@style/hub_tv_right_style"
+                    android:text="未开启"/>
+
+
+                <TextView
+                    style="@style/hub_tv_left_style"
+                    android:text="直播状态:"
+                   />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/hub_rl_style">
+
+                <Switch
+                    android:id="@+id/swith_start_live"
+                    style="@style/hub_switch_style"
+                    android:checked="false"
+                    >
+
+                </Switch>
+
+                <TextView
+                    style="@style/hub_tv_left_style"
+                    android:text="开启直播:"
+                />
+
+
+
+            </RelativeLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_set_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    style="@style/hub_rl_style">
+
+                    <TextView
+                        android:id="@+id/tv_videofps"
+                        style="@style/hub_tv_right_style"
+
+                        />
+
+
+
+                    <TextView
+                        style="@style/hub_tv_left_style"
+                        android:text="实时视频:"
+                        />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/hub_rl_style">
+
+                    <TextView
+                        android:id="@+id/tv_videobitrate"
+                        style="@style/hub_tv_right_style"
+                      />
+
+
+                    <TextView
+                        style="@style/hub_tv_left_style"
+                        android:text="视频带宽:"
+                      />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/hub_rl_style">
+
+                    <TextView
+                        android:id="@+id/tv_audiobitrate"
+                       style="@style/hub_tv_right_style"/>
+
+
+
+                    <TextView
+                        style="@style/hub_tv_left_style"
+                        android:text="音频带宽:"
+                       />
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    style="@style/hub_rl_style">
+
+                    <TextView
+                        android:id="@+id/tv_videocachesize"
+                        style="@style/hub_tv_right_style"/>
+
+
+                    <TextView
+                        style="@style/hub_tv_left_style"
+                        android:text="视频缓存大小:"
+                       />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                   style="@style/hub_rl_style">
+
+                    <Switch
+                        android:id="@+id/swith_audio_stream"
+                        style="@style/hub_switch_style">
+
+                    </Switch>
+
+                    <TextView
+                        style="@style/hub_tv_left_style"
+                        android:text="开启音频流:"
+                      />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/set_item_width"
+                    android:layout_height="@dimen/set_item_height"
+                    android:layout_marginTop="@dimen/set_item_space_small"
+                    android:background="@drawable/selected_set_item_shape">
+
+                    <Switch
+                        android:id="@+id/swith_audio_muted"
+                        style="@style/hub_switch_style"/>
+
+
+                    <TextView
+                        style="@style/hub_tv_left_style"
+                        android:text="设置静音:"
+                      />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/hub_rl_style">
+
+                    <Switch
+                        android:id="@+id/swith_video_encoding"
+                        style="@style/hub_switch_style"/>
+
+
+
+                    <TextView
+                        style="@style/hub_tv_left_style"
+                        android:text="设置强制视频编码:"
+                        />
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+
+                android:layout_marginBottom="@dimen/set_item_space_small"
+                style="@style/hub_rl_style">
+
+                <TextView
+                    android:id="@+id/tv_unlogin"
+                    style="@style/hub_tv_style"
+                    android:layout_marginLeft="11dp"
+                    android:layout_centerInParent="true"
+                    android:text="注销登录"
+                   >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

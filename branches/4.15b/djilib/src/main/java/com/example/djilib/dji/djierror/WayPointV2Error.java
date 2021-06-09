@@ -1,0 +1,92 @@
+package com.example.djilib.dji.djierror;
+
+import dji.common.error.DJIWaypointV2Error;
+
+public enum WayPointV2Error {
+
+    MISSION_COUNT_OVER_RANGE(DJIWaypointV2Error.MISSION_COUNT_OVER_RANGE.getErrorCode(),"任务航路点大于65535个。"),
+    MISSION_COUNT_TOO_FEW(DJIWaypointV2Error.MISSION_COUNT_TOO_FEW.getErrorCode(),"任务航路点小于2个。"),
+    MISSION_MAX_FLIGHT_SPEED_INVALID(DJIWaypointV2Error.MISSION_MAX_FLIGHT_SPEED_INVALID.getErrorCode(),"任务最大飞行速度大于15m/s或小于2m/s。"),
+    MISSION_AUTO_FLIGHT_SPEED_INVALID(DJIWaypointV2Error.MISSION_AUTO_FLIGHT_SPEED_INVALID.getErrorCode(),"任务自动飞行速度大于最大飞行速度。"),
+    MISSION_GOTO_FIRST_WAYPOINT_MODE_INVALID(DJIWaypointV2Error.MISSION_GOTO_FIRST_WAYPOINT_MODE_INVALID.getErrorCode(),"任务设置的去到第一个航点模式是无效的。"),
+
+    MISSION_FINISHED_ACTION_INVALID(DJIWaypointV2Error.MISSION_FINISHED_ACTION_INVALID.getErrorCode(),"任务设置的完成动作是无效的。"),
+    MISSION_EXIT_MISSION_ON_RC_SIGNAL_LOST_INVALID(DJIWaypointV2Error.MISSION_EXIT_MISSION_ON_RC_SIGNAL_LOST_INVALID.getErrorCode(),"The mission exit mission on RC signal lost is invalid。"),
+    MISSION_ALREADY_EXECUTING(DJIWaypointV2Error.MISSION_ALREADY_EXECUTING.getErrorCode(),"已经有一个任务执行。"),
+    UPLOAD_WAYPOINT_COUNT_OVER_MISSION_WAYPOINT_COUNT(DJIWaypointV2Error.UPLOAD_WAYPOINT_COUNT_OVER_MISSION_WAYPOINT_COUNT.getErrorCode(),"上传路径点计数大于任务路径点计数。"),
+    MISSION_WAYPOINT_DISTANCE_TOO_CLOSE(DJIWaypointV2Error.MISSION_WAYPOINT_DISTANCE_TOO_CLOSE.getErrorCode(),"航路点距离太近。航点间的有效距离大于0.5m。"),
+
+    MISSION_WAYPOINT_DISTANCE_TO_FAR(DJIWaypointV2Error.MISSION_WAYPOINT_DISTANCE_TO_FAR.getErrorCode(),"航路点距离太长。航点间的有效距离小于5km。"),
+    MISSION_WAYPOINT_MAX_FLIGHT_SPEED_OVER_MISSION_MAX_FLIGHT_SPEED(DJIWaypointV2Error.MISSION_WAYPOINT_MAX_FLIGHT_SPEED_OVER_MISSION_MAX_FLIGHT_SPEED.getErrorCode(),"有一个航路点最大飞行速度大于任务最大飞行速度。"),
+    WAYPOINT_AUTO_FLIGHT_SPEED_OVER_WAYPOINT_MAX_FLIGHT_SPEED(DJIWaypointV2Error.WAYPOINT_AUTO_FLIGHT_SPEED_OVER_WAYPOINT_MAX_FLIGHT_SPEED.getErrorCode(),"有一个路径点自动飞行速度大于最大飞行速度。"),
+    WAYPOINT_AUTO_FLIGHT_SPEED_OVER_MISSION_MAX_FLGHT_SPEED(DJIWaypointV2Error.WAYPOINT_AUTO_FLIGHT_SPEED_OVER_MISSION_MAX_FLGHT_SPEED.getErrorCode(),"有一个路径点自动飞行速度大于任务最大飞行速度。"),
+    WAYPOINT_HEADING_MODE_INVALID(DJIWaypointV2Error.WAYPOINT_HEADING_MODE_INVALID.getErrorCode(),"航点的航向模式无效。"),
+
+    WAYPOINT_HEADING_INVALID(DJIWaypointV2Error.WAYPOINT_HEADING_INVALID.getErrorCode(),"航点航向无效。"),
+    WAYPOINT_TURN_MODE_INVALID(DJIWaypointV2Error.WAYPOINT_TURN_MODE_INVALID.getErrorCode(),"航点的转向模式无效。"),
+    WAYPOINT_FLIGHT_PATH_MODE_INVALID(DJIWaypointV2Error.WAYPOINT_FLIGHT_PATH_MODE_INVALID.getErrorCode(),"航点的飞行路径模式是无效的。"),
+    WAYPOINT_DAMPING_DISTANCE_INVALID(DJIWaypointV2Error.WAYPOINT_DAMPING_DISTANCE_INVALID.getErrorCode(),"航点阻尼距离大于或等于相邻路径的距离。"),
+    LAST_WAYPOINT_FLIGHT_PATH_MODE_INVALID(DJIWaypointV2Error.LAST_WAYPOINT_FLIGHT_PATH_MODE_INVALID.getErrorCode(),"最后一个航点的路径飞行路径模式是无效的。"),
+
+    UPLOAD_WAYPOINT_INDEX_NOT_CONTINUE(DJIWaypointV2Error.UPLOAD_WAYPOINT_INDEX_NOT_CONTINUE.getErrorCode(),"上传航路点的索引在存储的航路点之后不继续。"),
+    FIRST_WAYPOINT_FLIGHT_PATH_MODE_INVALID(DJIWaypointV2Error.FIRST_WAYPOINT_FLIGHT_PATH_MODE_INVALID.getErrorCode(),"航点飞行路径模式对第一个航点是无效的。"),
+    WAYPOINT_COORDINATE_INVALID(DJIWaypointV2Error.WAYPOINT_COORDINATE_INVALID.getErrorCode(),"方向点位置坐标超过合理范围。"),
+    EXCEED_FLYING_RADIUS_LIMIT(DJIWaypointV2Error.EXCEED_FLYING_RADIUS_LIMIT.getErrorCode(),"终点位置超过半径限制。"),
+    EXCEED_FLYING_HEIGHT_LIMIT(DJIWaypointV2Error.EXCEED_FLYING_HEIGHT_LIMIT.getErrorCode(),"终点位置超过高度限制。"),
+
+    SDK_VERSION_NOT_MATCHED(DJIWaypointV2Error.SDK_VERSION_NOT_MATCHED.getErrorCode(),"SDK的版本与固件版本不匹配。"),
+    DOWNLOAD_MISSION_RANGE_OVER_STORAGE_COUNT(DJIWaypointV2Error.DOWNLOAD_MISSION_RANGE_OVER_STORAGE_COUNT.getErrorCode(),"预期下载的第一个和最后一个路径点的索引不在存储在飞机中的航路点的范围内。"),
+    NO_MISSION_UPLOADED_IN_AIRCRAFT(DJIWaypointV2Error.NO_MISSION_UPLOADED_IN_AIRCRAFT.getErrorCode(),"没有任务上传到飞机上。"),
+    DOWNLOAD_WAYPOINT_NOT_UPLOADED(DJIWaypointV2Error.DOWNLOAD_WAYPOINT_NOT_UPLOADED.getErrorCode(),"任务信息还没有上传。"),
+    AIRCRAFT_CURRENT_POSITION_TO_FIRST_WAYPOINT_TOO_FAR(DJIWaypointV2Error.AIRCRAFT_CURRENT_POSITION_TO_FIRST_WAYPOINT_TOO_FAR.getErrorCode(),"飞机目前的位置离第一个航点太远了。"),
+
+    UPLOADED_WAYPOINTS_TOO_FEW(DJIWaypointV2Error.UPLOADED_WAYPOINTS_TOO_FEW.getErrorCode(),"上传的路径点太少了。"),
+    NO_MISSION_EXECUTING(DJIWaypointV2Error.NO_MISSION_EXECUTING.getErrorCode(),"没有执行任何任务。"),
+    MISSION_ALREADY_STARTED(DJIWaypointV2Error.MISSION_ALREADY_STARTED.getErrorCode(),"任务已经开始了。"),
+    MISSION_ALREADY_STOPPED(DJIWaypointV2Error.MISSION_ALREADY_STOPPED.getErrorCode(),"任务已经停止了。"),
+    NO_EXECUTING_MISSION_TO_RECOVER(DJIWaypointV2Error.NO_EXECUTING_MISSION_TO_RECOVER.getErrorCode(),"没有要恢复的执行任务。"),
+
+    MISSION_ALREADY_INTERRUPTED(DJIWaypointV2Error.MISSION_ALREADY_INTERRUPTED.getErrorCode(),"任务已经被打断。"),
+    RECOVER_NO_RECORDED_POINT(DJIWaypointV2Error.RECOVER_NO_RECORDED_POINT.getErrorCode(),"没有记录点恢复。"),
+    AIRCRAFT_FLYING_STATUS_ERROR(DJIWaypointV2Error.AIRCRAFT_FLYING_STATUS_ERROR.getErrorCode(),"飞机的飞行状况很差。"),
+    AIRCRAFT_STATE_HOME_POINT_NOT_RECORD(DJIWaypointV2Error.AIRCRAFT_STATE_HOME_POINT_NOT_RECORD.getErrorCode(),"目前还没有记录飞机的起飞点。"),
+    AIRCRAFT_GPS_SIGNAL_WEEK(DJIWaypointV2Error.AIRCRAFT_GPS_SIGNAL_WEEK.getErrorCode(),"飞机的GPS信号很弱。"),
+
+    AIRCRAFT_RTK_NOT_READY(DJIWaypointV2Error.AIRCRAFT_RTK_NOT_READY.getErrorCode(),"飞机RTK还没有准备好。"),
+    MISSION_CROSS_NO_FLY_ZONE(DJIWaypointV2Error.MISSION_CROSS_NO_FLY_ZONE.getErrorCode(),"任务跨越禁飞区。"),
+    AIRCRAFT_LOW_BATTERY(DJIWaypointV2Error.AIRCRAFT_LOW_BATTERY.getErrorCode(),"飞机的电池电量低。"),
+    UPLOADED_ACTION_ID_DUPLICATED(DJIWaypointV2Error.UPLOADED_ACTION_ID_DUPLICATED.getErrorCode(),"上传的任务ID已经存在。"),
+    ACTION_STORAGE_NOT_ENOUGH(DJIWaypointV2Error.ACTION_STORAGE_NOT_ENOUGH.getErrorCode(),"没有足够的内存空间来存储动作操作飞机。"),
+
+    DOWNLOAD_ACTIONS_FAILED(DJIWaypointV2Error.DOWNLOAD_ACTIONS_FAILED.getErrorCode(),"下载操作失败。"),
+    UPLOAD_ACTION_TRIGGER_TYPE_INVALID(DJIWaypointV2Error.UPLOAD_ACTION_TRIGGER_TYPE_INVALID.getErrorCode(),"飞机没有足够的内存空间来存储动作。"),
+    ACTION_ASSOCIATE_TRIGGER_TYPE_INVALID(DJIWaypointV2Error.ACTION_ASSOCIATE_TRIGGER_TYPE_INVALID.getErrorCode(),"上传的动作触发器类型无效。"),
+    ACTION_INTERVAL_TRIGGER_TYPE_INVALID(DJIWaypointV2Error.ACTION_INTERVAL_TRIGGER_TYPE_INVALID.getErrorCode(),"动作间隔触发类型是无效的。"),
+    ACTION_ACTUATOR_NOT_SUPPORT(DJIWaypointV2Error.ACTION_ACTUATOR_NOT_SUPPORT.getErrorCode(),"不支持这个动作执行器。"),
+
+    ACTION_ACTUATOR_TYPE_INVALID(DJIWaypointV2Error.ACTION_ACTUATOR_TYPE_INVALID.getErrorCode(),"动作执行器类型是无效的。"),
+    ACTION_ACTUATOR_OPERATION_TYPE_INVALID(DJIWaypointV2Error.ACTION_ACTUATOR_OPERATION_TYPE_INVALID.getErrorCode(),"动作执行器操作类型是无效的。"),
+    ACTION_ACTUATOR_GIMBAL_PARAM_INVALID(DJIWaypointV2Error.ACTION_ACTUATOR_GIMBAL_PARAM_INVALID.getErrorCode(),"云台执行器参数无效。"),
+    ACTION_ROTATE_GIMBAL_FAILED(DJIWaypointV2Error.ACTION_ROTATE_GIMBAL_FAILED.getErrorCode(),"动作执行器旋转万向节故障。"),
+    ACTION_ROTATE_AIRCRAFT_YAW_PARAM_INVALID(DJIWaypointV2Error.ACTION_ROTATE_AIRCRAFT_YAW_PARAM_INVALID.getErrorCode(),"旋转飞机偏航参数动作无效。"),
+
+    ACTION_ROTATE_AIRCRAFT_YAW_FAILED(DJIWaypointV2Error.ACTION_ROTATE_AIRCRAFT_YAW_FAILED.getErrorCode(),"动作执行器旋转飞机偏航执行失败。");
+
+    int code;
+    String error;
+
+    WayPointV2Error(int code, String error) {
+        this.code = code;
+        this.error = error;
+    }
+    public static  String getError(int code) {
+
+        for (WayPointV2Error e : WayPointV2Error.values()) {
+            if (e.code == code) {
+                return e.error;
+            }
+        }
+        return "航线任务失败";
+
+    }
+}

@@ -1,0 +1,9 @@
+include ':amaplibrary'
+include ':vitamio'
+include ':titaniclibrary'
+include ':library'
+include ':hublibrary'
+include ':djilib'
+include ':commonlib'
+include ':app'
+rootProject.name = "Tovos_Lib"

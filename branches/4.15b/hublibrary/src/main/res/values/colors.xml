@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="light_gray">#B3FFFFFF</color>
+    <color name="background_blue">#242d34</color>
+    <color name="dark_gray">#80000000</color>
+    <color name="medium_blue">#298080</color>
+
+    <color name="pad_status_bar_bg">#081727</color>
+    <color name="pad_actionbar_bg">#081727</color>
+    <color name="pad_waypoint_jd_bg">#BF0A2139</color>
+</resources>

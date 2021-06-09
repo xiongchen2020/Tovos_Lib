@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="action_height">34dp</dimen>
+<!--    <dimen name="all_layout_mation_top">59dp</dimen>-->
+
+<!--    <dimen name="map_settings_seperator">17dp</dimen>-->
+<!--    <dimen name="map_settings_item_seperator">5.7dp</dimen>-->
+
+
+<!--    小地图 小FPV窗口的高和宽-->
+    <dimen name="small_widget_height">108dp</dimen>
+    <dimen name="small_widget_width">192dp</dimen>
+
+    <dimen name="PreFlightStatusWidget_width">180dp</dimen>
+    <dimen name="PreFlightStatusWidget_height">25dp</dimen>
+
+    <dimen name="FlightModeWidget_width">116dp</dimen>
+    <dimen name="FlightModeWidget_height">25dp</dimen>
+
+    <dimen name="GPSSignalWidget_width">50dp</dimen>
+    <dimen name="GPSSignalWidget_height">25dp</dimen>
+
+    <dimen name="VisionWidget_width">25dp</dimen>
+    <dimen name="VisionWidget_height">25dp</dimen>
+
+    <dimen name="RemoteControlSignalWidget_width">43dp</dimen>
+    <dimen name="RemoteControlSignalWidget_height">25dp</dimen>
+
+    <dimen name="VideoSignalWidget_width">43dp</dimen>
+    <dimen name="VideoSignalWidget_height">25dp</dimen>
+
+    <dimen name="BatteryWidget_width">91dp</dimen>
+    <dimen name="BatteryWidget_height">25dp</dimen>
+
+    <dimen name="ConnectionWidget_width">18dp</dimen>
+    <dimen name="ConnectionWidget_height">18dp</dimen>
+
+    <dimen name="DashboardWidget_width">306dp</dimen>
+    <dimen name="DashboardWidget_height">68dp</dimen>
+
+    <dimen name="PreFlightCheckListPanel_mationRight">280dp</dimen>
+    <dimen name="PreFlightCheckListPanel_mationButtom">10dp</dimen>
+
+    <dimen name="CameraControlsWidget_height">142dp</dimen>
+    <dimen name="CameraControlsWidget_with">34dp</dimen>
+
+    <dimen name="waypoint_botton_height">25dp</dimen>
+    <dimen name="waypoint_button_layout_width">50dp</dimen>
+<!--    <dimen name="waypoint_button_layout_height">161dp</dimen>-->
+
+    <dimen name="camrea_set_height">176dp</dimen>
+    <dimen name="camrea_set_with">120dp</dimen>
+    <dimen name="camrea_item_height">24dp</dimen>
+
+<!--    <dimen name="fxjl_height">34dp</dimen>-->
+<!--    <dimen name="fxjl_with">45.5dp</dimen>-->
+    <dimen name="fxjl_text">10.2sp</dimen>
+<!--    <dimen name="fxjl_value">4.5sp</dimen>-->
+
+    <dimen name="compass_martin_top">2dp</dimen>
+    <dimen name="take_off_buttons_layout_martin_top">55dp</dimen>
+<!--    <dimen name="take_off_buttons_layout_martin_left">15dp</dimen>-->
+
+    <dimen name="set_layout_width">268dp</dimen>
+<!--    <dimen name="set_layout_height">340dp</dimen>-->
+    <dimen name="set_item_width">256dp</dimen>
+    <dimen name="set_item_height">28.5dp</dimen>
+    <dimen name="set_item_heightall">120dp</dimen>
+    <dimen name="set_seekbar_height">124dp</dimen>
+    <dimen name="set_seekbar_width">234dp</dimen>
+    <dimen name="seekbar_text_martin_top">9dp</dimen>
+    <dimen name="seekbar_martin_top">30dp</dimen>
+    <dimen name="seekbar_text_martin_top2">49dp</dimen>
+    <dimen name="seekbar_martin_top2">66dp</dimen>
+
+    <dimen name="seekbar_text_martin_top3">89dp</dimen>
+    <dimen name="seekbar_martin_top3">102dp</dimen>
+    <dimen name="set_item_space_big">8dp</dimen>
+    <dimen name="set_item_space_small">4dp</dimen>
+    <dimen name="title_share_text">8sp</dimen>
+    <dimen name="set_title_height">36dp</dimen>
+    <dimen name="set_info_height">224dp</dimen>
+    <dimen name="info_logo_height">69dp</dimen>
+    <dimen name="info_logo_with">79dp</dimen>
+
+<!--    <dimen name="tj_layout_height">149dp</dimen>-->
+
+    <dimen name="flight_list_layout_height">183dp</dimen>
+
+    <dimen name="flight_button_width">126dp</dimen>
+    <dimen name="flight_text_layout_height">36dp</dimen>
+    <dimen name="flight_text_height">25dp</dimen>
+    <dimen name="flight_text_width">58dp</dimen>
+    <dimen name="flight_text_martin_left1">12.5dp</dimen>
+    <dimen name="flight_text_martin_left2">36.3dp</dimen>
+    <dimen name="flight_text_martin_left3">34dp</dimen>
+    <dimen name="flight_expeded_height">85dp</dimen>
+
+    <dimen name="task_list_layout_height">160dp</dimen>
+
+    <dimen name="tower_martin_left1">24dp</dimen>
+    <dimen name="tower_martin_left2">101dp</dimen>
+<!--    <dimen name="tower_martin_left3">195dp</dimen>-->
+
+    <dimen name="menu_width">49dp</dimen>
+    <dimen name="menu_height">61dp</dimen>
+    <dimen name="menu_layout_width">53dp</dimen>
+    <dimen name="menu_martin_top">59dp</dimen>
+
+    <dimen name="action_bar_width">35dp</dimen>
+    <dimen name="action_img_martin_left">1dp</dimen>
+
+    <dimen name="welecome_bg_martin_top">24dp</dimen>
+    <dimen name="welecome_bg_martin_right">24dp</dimen>
+    <dimen name="welecome_bg_martin_buttom">100dp</dimen>
+
+    <dimen name="welecome_icon_width">36dp</dimen>
+    <dimen name="welecome_icon_height">36dp</dimen>
+    <dimen name="welecome_icon_martin_buttom">40dp</dimen>
+
+    <dimen name="welecome_title_width">85dp</dimen>
+    <dimen name="welecome_title_height">20dp</dimen>
+    <dimen name="welecome_title_martin_buttom">10dp</dimen>
+
+    <dimen name="welecome_flight_martin_top">40dp</dimen>
+    <dimen name="welecome_flight_martin_right">160dp</dimen>
+
+    <dimen name="paddingtop">6dp</dimen>
+    <dimen name="paddingbuttom">6dp</dimen>
+
+    <dimen name="welecome_flight_width">63dp</dimen>
+<!--    <dimen name="welecome_flight_height">33dp</dimen>-->
+
+    <dimen name="waypoint_menu_totop">14dp</dimen>
+    <dimen name="waypoint_menu_totop2">10dp</dimen>
+<!--    <dimen name="waypoint_menu_button_height">32dp</dimen>-->
+    <dimen name="error_list_to_left">55dp</dimen>
+    <dimen name="error_list_to_bottom">55dp</dimen>
+
+    <dimen name="infared_thermal_to_top">35dp</dimen>
+    <dimen name="infared_thermal_to_right">45dp</dimen>
+</resources>

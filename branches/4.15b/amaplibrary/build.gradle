@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+
+    uploadArchives {
+        repositories.mavenDeployer {
+            //打包的路径
+            repository(url: maven_url+'tovos-hosted/') {
+                //你Nexus的账户密码
+                authentication(userName: 'admin', password: '123456')
+            }
+            pom.project {
+                version amapVersion //版本号，多次打包不能一致
+                artifactId 'maplib' //识别Id，与项目名称一致即可
+                groupId 'com.amap' //组号，类似包名
+                packaging 'aar' //打包格式
+                description 'COMMON UTIL LIB' //描述
+            }
+        }
+    }
+    compileSdkVersion csdkVersion
+    buildToolsVersion buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion msdkVersion
+        targetSdkVersion tsdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.amap.api:3dmap:6.9.2'
+    implementation 'com.amap.api:location:4.7.0'
+    implementation "com.common:utilslib:$commonlibVersion"
+
+}

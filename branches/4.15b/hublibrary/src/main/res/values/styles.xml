@@ -1,0 +1,66 @@
+<resources>
+
+
+
+    <style name="hub_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">@dimen/fxjl_text</item>
+    </style>
+
+    <!--侧边栏弹出框text style-->
+    <style name="hub_tv_left_style" parent="hub_tv_style">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">11dp</item>
+    </style>
+
+
+    <style name="hub_tv_right_style" parent="hub_tv_style">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">11dp</item>
+    </style>
+
+    <style name="hub_switch_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="hub_et_style">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:textSize">@dimen/fxjl_text</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="hub_ll_style">
+        <item name="android:layout_width">@dimen/set_layout_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/selected_set_bg_shape</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="hub_rl_style">
+        <item name="android:background">@drawable/selected_set_item_shape</item>
+        <item name="android:layout_width">@dimen/set_item_width</item>
+        <item name="android:layout_height">@dimen/set_item_height</item>
+        <item name="android:layout_marginTop">@dimen/set_item_space_small</item>
+
+    </style>
+</resources>

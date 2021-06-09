@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+
+    uploadArchives {
+        repositories.mavenDeployer {
+            //打包的路径
+            repository(url: maven_url+'tovos-hosted/') {
+                //你Nexus的账户密码
+                authentication(userName: 'admin', password: '123456')
+            }
+            pom.project {
+                version titanicVersion //版本号，多次打包不能一致
+                artifactId 'titaniclib' //识别Id，与项目名称一致即可
+                groupId 'com.ui' //组号，类似包名
+                packaging 'aar' //打包格式
+                description 'titaniclib' //描述
+            }
+        }
+    }
+    compileSdkVersion csdkVersion
+    buildToolsVersion buildToolsVersion
+
+    defaultConfig {
+        flavorDimensions "default"
+        minSdkVersion msdkVersion
+        targetSdkVersion tsdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.0-alpha01'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

@@ -1,0 +1,80 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+
+    uploadArchives {
+        repositories.mavenDeployer {
+            //打包的路径
+            repository(url: maven_url+'tovos-hosted/') {
+                //你Nexus的账户密码
+                authentication(userName: 'admin', password: '123456')
+            }
+            pom.project {
+                version djiVersion //版本号，多次打包不能一致
+                artifactId 'customlib' //识别Id，与项目名称一致即可
+                groupId 'com.customdji' //组号，类似包名
+                packaging 'aar' //打包格式
+                description 'CUSTOM DJI LIB' //描述
+            }
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    compileSdkVersion csdkVersion
+    buildToolsVersion buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion msdkVersion
+        targetSdkVersion tsdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation 'com.msdk:lib:4.15.6'
+    compileOnly 'com.msdk:libpro:4.15.6'
+
+    implementation('com.dji:dji-uxsdk:4.14', {
+        // Uncomment the following line if your app does not need Anti Distortion for
+        // Mavic 2 Pro and Mavic 2 Zoom. It will greatly reducing the size of the APK:
+        // exclude module: 'library-anti-distortion'
+        exclude module: 'library-anti-distortion'
+        exclude module: 'fly-safe-database'
+        exclude module: 'dji-sdk'
+    })
+   // implementation 'com.amap.api:3dmap:7.5.0'
+  //  implementation 'com.dji:fly-safe-database:1.0.19'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+//    implementation 'com.dji:fly-safe-database:1.0.19'
+//    implementation 'com.dji:library-anti-distortion:4.7'
+//    implementation 'com.dji:utmiss:1.0.8'
+//    implementation 'com.vividsolutions:jts:1.8'
+//    implementation 'com.dji:library-networkrtk-helper:2.0.2'
+    implementation "com.uxsdk:core:1.1.0"
+   // implementation "com.uxsdk:map:1.0.8-SNAPSHOT"
+    implementation "com.common:utilslib:$commonlibVersion"
+
+}
